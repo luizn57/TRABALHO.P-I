@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg-color: var(--bg-color) #1d2631;
+    --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
+    --h1-font: 4rem;
+    --p-font: 1rem;
+}
+
+body {
+    background-color: #1d2631;
+    color: var(--tex-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 8%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--tex-color);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo i {
+    color: var(--main-color);
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.navegação {
+    display: flex;
+}
+
+.navegação a {
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 0 30px;
+    transition: a .55s ease;
+}
+
+.navegação a:hover {
+    color: var(--main-color);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    font-size: 35px;
+    color: var(--tex-color);
+    z-index: 10001;
+    cursor: pointer;
+}
+
+.header-icons i {
+    margin-right: 25px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.header-icons i:hover {
+    transform: translateY(-5px);
+    color: var(--main-color);
+}
+
+.section {
+    padding: 0 15%;
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-text h1 {
+    font-size: var(--h1-font);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.home-text h5 {
+    color: #ffffff99;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+.home-text h3 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.home-img img {
+    max-width: 100%;
+    width: 28rem;
+    height: auto;
+    margin-left: 25%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 70px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    border: solid 2px var(--tex-color);
+    transition: all.55 ease;
+    color: #fff;
+}
+
+.btn:hover {
+    background: var(--tex-color);
+    border: 2px solid var(--tex-color);
+    color: #000;
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main li img {
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+}
+
+.row {
+    background: var(--main-color);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row:hover {
+    transform: translateY(-8px);
+}
+
+.row2 {
+    background: #ff758d;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+}
+
+.row2:hover {
+    transform: translateY(-8px);
+}
+
+.row3 {
+    background: #ffd06d;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+}
+
+.row3:hover {
+    transform: translateY(-8px);
+}
+
+.menu-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; /* Centraliza o conteúdo */
+    margin-top: 200px; /* Adiciona espaçamento entre o título e os produtos */
+}
+
+.titulo-produtos {
+    text-align: center;
+    justify-content: center; /* Adicione esta linha */
+    margin-top: 10px;
+    margin-bottom: 200px; /* Adiciona espaçamento abaixo do título */
+}
+
+.produto {
+    text-align: center;
+    margin: 40px 20px; /* Espaçamento entre os produtos */
+    width: calc(50% - 40px); /* Para exibir dois produtos por linha */
+    max-width: 250px;  /*  tamanho do botão de adicionar o carrinho */
+}
+
+.produto img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.produto h3,
+.produto p {
+    margin: 0;
+}
+
+.produto button {
+    display: block;
+    margin:  auto;
+}
+.contact-icons {
+    text-align: center; /* Centraliza os ícones */
+}
+
+.contact-icons i {
+     text-align: center;
+    font-size: 32px; /* Ajuste o tamanho dos ícones (do face e do insta) conforme necessário */
+}
+.contact-tab {
+    position: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color:#1d2631;
+    padding: 20px;
+
+}
+
+.contact-container h2, 
+.contact-icons,
+
+.contact-info {
+    text-align: center;
+}
+
+    .navegação {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        background-color: #1d2631;
+        padding: 20px;
+    }
+
+    .navegação li{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+
+.menu-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 10px; /* Espaçamento entre os produtos */
+    padding: 20px;
+}
+
+.produto {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.produto img {
+    max-width: 190%;
+    height: auto;
+}
+
+.titulo-produtos {
+    text-align: center;
+    margin-top: 125px;
+}
+/* Estilos adicionados */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100; /* Garante que o cabeçalho está sobre o conteúdo */
+}
+
+.logo {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.navegacao {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px; /* Espaçamento à direita para o último item */
+}
+
+.navegacao li {
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navegacao li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.navegacao li:hover {
+    background-color: #ddd;
+}
+ /* Estilos para o ícone de login */
+ .login-tab {
+    margin-left: 15px;
+    cursor: pointer; /* Alterado para cursor de ponteiro para indicar que é clicável */
+}
+ /* Estilos para o formulário de cadastro */
+        #cadastro-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        #cadastro-form input {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #cadastro-form button {
+            padding: 10px;
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            margin-left: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .header-icons a:hover {
+            color: #666;
+        }
+
+        .tab {
+            display: none;
+            overflow-y: auto;
+            max-height: calc(100% - 70px); /* altura máxima menos a altura do cabeçalho */
+            width: 100%;
+        }
+
+        .item-carrinho {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Adiciona um espaçamento entre os itens do carrinho */
+        }
+
+        .item-carrinho img {
+            max-width: 80px; /* Ajuste conforme necessário */
+            height: auto;
+            margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+        }
+
+        .item-carrinho button {
+            margin-left: 10px; /* Espaçamento entre o texto e o botão */
+        }
+
+        #carrinho-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            min-height: calc(100% - 120px); /* altura da tela menos a altura do cabeçalho e um espaço adicional */
+            padding-top: 125px; /* Espaçamento superior ajustado */
+        }
+
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+    <title>Fones de Ouvidos</title>
+    <style>
+        /* Estilos adicionados */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .tab {
+            display: none;
+            overflow-y: auto;
+            max-height: calc(100% - 70px); /* altura máxima menos a altura do cabeçalho */
+            width: 100%;
+        }
+
+        .item-carrinho {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Adiciona um espaçamento entre os itens do carrinho */
+        }
+
+        .item-carrinho img {
+            max-width: 80px; /* Ajuste conforme necessário */
+            height: auto;
+            margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+        }
+
+        #carrinho-tab {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: center;
+            min-height: calc(100% - 120px); /* altura da tela menos a altura do cabeçalho e um espaço adicional */
+            padding-top: 125px; /* Espaçamento superior ajustado */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo"><i class='bx bx-headphone'></i>Soundbox</a>
+    
+        <ul class="navegacao">
+            <li><a href="#" class="tab-link" onclick="openTab('home-tab')"><i class='bx bx-home'></i>HOME</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab('menu-tab')"><i class='bx bx-info-circle'></i>PRODUTOS</a></li>
+            <li><a href="#" class="tab-link" onclick="openTab('contact-tab')"><i class='bx bx-phone'></i>CONTATO</a></li>
+        </ul><!--navegacao-->
+    
+        
+        <div class="header-icons">
+            <!-- Ícones dos produtos -->
+            <a href="#" class="cart-tab" onclick="openTab('carrinho-tab')"><i class='bx bx-cart'></i></a>
+            <!-- Ícone de login -->
+            <a class="login-tab" onclick="openCadastroForm()"><i class='bx bx-user'></i></a>
+        </div><!--header-icons-->
+    </header>
+    
+    <section id="home-tab" class="tab" style="display: block;">
+        <!-- Conteúdo da página inicial -->
+        <div class="home">
+            <div class="home-img">
+                <img src="product1.png" class="one">
+            </div><!--home-img-->
+
+            <div class="home-text">
+                <h1>Wireless <br> Headphones</h1>
+                <h5>The smarter way to listen</h5>
+                <h3>$199.00</h3>
+                <button onclick="adicionarAoCarrinho('product1.png', 'Wireless Headphones', 199)" class="btn">Adicionar ao Carrinho</button>
+            </div><!--home-text-->
+        </div><!--home-->
+
+    </section>
+
+    <div id="carrinho-tab" class="tab" style="display: none;">
+        <!-- Conteúdo do carrinho -->
+        <h2>Carrinho</h2>
+        <div id="carrinho-itens"></div>
+        <p><strong>Total: $<span id="total-carrinho">0.00</span></strong></p>
+        <button onclick="finalizarCompra()" class="btn-finalizar">Finalizar Compra</button>
+    </div>
+
+    <div id="menu-tab" class="tab" style="display: none;">
+        <!-- Conteúdo do menu -->
+        <h2 class="titulo-produtos">Nossos Produtos</h2>
+        <div class="menu-produtos">
+            
+             <!-- Produto 1 -->
+            <div class="produto">
+                <img src="produto44.png" alt="Headphones JBL">
+                <h3>Headphones</h3>
+                <p>$120.00</p>
+                <button onclick="adicionarAoCarrinho('produto44.png', 'Headphones JBL', 120)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+        
+             <!-- Produto 2 -->
+             <div class="produto">
+                <img src="product2.png" alt="Headphones JBL">
+                <h3>Headphones</h3>
+                <p>$120.00</p>
+                <button onclick="adicionarAoCarrinho('product2.png', 'Headphones JBL', 120)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+
+             <!-- Produto 3 -->
+             <div class="produto">
+                <img src="product3.png" alt="Headphones JBL">
+                <h3>Headphones</h3>
+                <p>$120.00</p>
+                <button onclick="adicionarAoCarrinho('product3.png', 'Headphones JBL', 120)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="produto">
+                <img src="produto33.png" alt="Headphones JBL">
+                <h3>Headphones</h3>
+                <p>$200.00</p>
+                <button onclick="adicionarAoCarrinho('produto33.png', 'Headphones JBL', 200)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 5-->
+            <div class="produto">
+                <img src="produto11.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$90.00</p>
+                <button onclick="adicionarAoCarrinho('produto11.png', 'Caixa de Som JBL', 90)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+            <!-- Produto 6 -->
+            <div class="produto">
+                <img src="produto10.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$50.00</p>
+                <button onclick="adicionarAoCarrinho('produto10.png', 'Caixa de Som JBL', 50)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+            <!-- Produto 7 -->
+            <div class="produto">
+                <img src="produto6.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$110.00</p>
+                <button onclick="adicionarAoCarrinho('produto6.png', 'Caixa de Som JBL', 110)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+             <!-- Produto 8-->
+              <div class="produto">
+                <img src="produto7.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$50.00</p>
+                <button onclick="adicionarAoCarrinho('produto7.png', 'Caixa de Som JBL', 50)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+            <!-- Produto 9 -->
+            <div class="produto">
+                <img src="produto8.png" alt="Produto 10">
+                <h3>JBL</h3>
+                <p>$50.00</p>
+                <button onclick="adicionarAoCarrinho('produto8.png', 'Caixa de Som JBL', 50)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+              <!-- Produto 10 -->
+              <div class="produto">
+                <img src="produto9.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$50.00</p>
+                <button onclick="adicionarAoCarrinho('produto9.png', 'Caixa de Som JBL', 50)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 11 -->
+            <div class="produto">
+                <img src="proto99.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$120.00</p>
+                <button onclick="adicionarAoCarrinho('proto99.png', 'Caixa de Som JBL', 50)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+              <!-- Produto 12 -->
+              <div class="produto">
+                <img src="produto233.png" alt="Caixa de Som JBL">
+                <h3>JBL</h3>
+                <p>$100.00</p>
+                <button onclick="adicionarAoCarrinho('produto233.png', 'Caixa de Som JBL', 50)" class="btn">Adicionar ao Carrinho</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+
+    <div id="contact-tab" class="tab" style="display: none;">
+        <!-- Conteúdo de contato -->
+        <div class="contact-container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-icons">
+                <!-- Ícones de redes sociais -->
+                <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/sound_boxooficial/?next=%2F" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <!-- Ícone de informações de contato -->
+                <div class="contact-info">
+                    <p>Entre em contato:</p>
+                    <p>Email: seu_email@example.com</p>
+                    <p>Telefone: +55 8100-0000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        // Variável global para rastrear o status de login
+        var usuarioLogado = false;
+
+        function slider(anything) {
+            document.querySelector('.one').src = anything;
+        }
+
+        function openTab(tabName) {
+            var tabs = document.querySelectorAll('.tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+
+        function openCadastroForm() {
+            openTab('cadastro-tab'); // Abre a aba com o formulário de cadastro
+        }
+
+        function adicionarAoCarrinho(imagem, nome, preco) {
+            var carrinhoItens = document.getElementById('carrinho-itens');
+            var itemCarrinho = document.createElement('div');
+            itemCarrinho.classList.add('item-carrinho');
+            itemCarrinho.innerHTML = `
+                <img src="${imagem}" alt="${nome}">
+                <p>${nome} - $${preco.toFixed(2)}</p>
+                <button onclick="removerDoCarrinho(this)" class="btn-remover">Remover</button>
+            `;
+            carrinhoItens.appendChild(itemCarrinho);
+
+            // Atualizar total do carrinho
+            var totalCarrinho = document.getElementById('total-carrinho');
+            var totalAtual = parseFloat(totalCarrinho.innerText);
+            totalAtual += preco;
+            totalCarrinho.innerText = totalAtual.toFixed(2);
+        }
+
+        function removerDoCarrinho(button) {
+            var itemCarrinho = button.parentElement;
+            var precoTexto = itemCarrinho.querySelector('p').innerText;
+            var preco = parseFloat(precoTexto.match(/\d+\.\d+/)[0]);
+            var totalCarrinho = document.getElementById('total-carrinho');
+            var totalAtual = parseFloat(totalCarrinho.innerText);
+            totalAtual -= preco;
+            totalCarrinho.innerText = totalAtual.toFixed(2);
+            itemCarrinho.remove();
+        }
+
+        function finalizarCompra() {
+            // Limpar a lista de itens do carrinho
+            var carrinhoItens = document.getElementById('carrinho-itens');
+            carrinhoItens.innerHTML = '';
+
+            // Resetar o total do carrinho
+            var totalCarrinho = document.getElementById('total-carrinho');
+            totalCarrinho.innerText = '0.00';
+
+            alert("Compra finalizada!");
+
+            // Fechar a aba do carrinho após finalizar a compra (opcional)
+            openTab('home-tab'); // Altere para a aba que desejar exibir após finalizar a compra
+        }
+
+        // Função para simular o login do usuário quando ele se cadastra
+        document.getElementById('cadastro-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Define a variável de status de login como verdadeira
+            usuarioLogado = true;
+            alert("Cadastro realizado com sucesso!");
+
+            // Redireciona o usuário para a página inicial
+            openTab('home-tab');
+        });
+    </script>
+</body>
+</html>
+

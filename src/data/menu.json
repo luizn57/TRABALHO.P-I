@@ -1,0 +1,105 @@
+{
+  "menu": {
+    "produtos_eletronicos": [
+      {
+        "id": 1,
+        "nome": "Headphones JBL",
+        "descricao": "Fones de ouvido com som de alta qualidade, cancelamento de ruído ativo, bateria de longa duração e design confortável.",
+        "preco": 800.00,
+        "url": "https://exemplo.com/headphones_jbl"
+      },
+      {
+        "id": 2,
+        "nome": "Headphones JBL",
+        "descricao": "Fones de ouvido com som de alta qualidade, cancelamento de ruído ativo, bateria de longa duração e design confortável.",
+        "preco": 800.00,
+        "url": "https://exemplo.com/headphones_jbl"
+      },
+      {
+        "id": 3,
+        "nome": "Headphones JBL",
+        "descricao": "Fones de ouvido com som de alta qualidade, cancelamento de ruído ativo, bateria de longa duração e design confortável.",
+        "preco": 800.00,
+        "url": "https://exemplo.com/headphones_jbl"
+      },
+      {
+        "id": 4,
+        "nome": "Headphones JBL",
+        "descricao": "Fones de ouvido com som de alta qualidade, cancelamento de ruído ativo, bateria de longa duração e design confortável.",
+        "preco": 800.00,
+        "url": "https://exemplo.com/headphones_jbl"
+      },
+      {
+        "id": 5,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 6,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 7,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 8,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 9,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 10,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 11,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 12,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 13,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      },
+      {
+        "id": 14,
+        "nome": "Caixa de Som JBL",
+        "descricao": "Caixa de som portátil com som estéreo, conectividade Bluetooth, resistência à água e bateria com duração de até 20 horas.",
+        "preco": 400.00,
+        "url": "https://exemplo.com/caixa_de_som_jbl"
+      }
+    ]
+  }
+}
+
